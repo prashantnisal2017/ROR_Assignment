@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @drug.name %>
+</p>
+
+<p>
+  <strong>Target alignment:</strong>
+  <%= @drug.target_alignment %>
+</p>
+
+<p>
+  <strong>Side effect:</strong>
+  <%= @drug.side_effect %>
+</p>
+
+<%= link_to 'Edit', edit_drug_path(@drug) %> |
+<%= link_to 'Back', drugs_path %>

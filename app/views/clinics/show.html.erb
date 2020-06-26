@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Clinic:</strong>
+  <%= @clinic.name %>
+</p>
+
+<p>
+  <strong>Doctor:</strong><br>
+  <%@doctors.each do |doctor|%>
+    <%= doctor.name %><br>
+  <%end%>
+</p>
+
+<%= link_to 'Edit', edit_clinic_path(@clinic) %> |
+<%= link_to 'Back', clinics_path %>

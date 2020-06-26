@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Drug:</strong>
+  <%= @trail_configuration.drug_id %>
+</p>
+
+<p>
+  <strong>Clinic:</strong>
+  <%= @trail_configuration.clinic_id %>
+</p>
+
+<p>
+  <strong>Doctor:</strong>
+  <%= @trail_configuration.doctor_id %>
+</p>
+
+<%= link_to 'Edit', edit_trail_configuration_path(@trail_configuration) %> |
+<%= link_to 'Back', trail_configurations_path %>

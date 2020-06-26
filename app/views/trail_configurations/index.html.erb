@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Trail Configurations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="5">Config Name</th>
+      <th colspan="5">Drug</th>
+      <th colspan="3">Clinic</th>
+      <th colspan="3">Doctor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trail_configurations.each do |trail_configuration| %>
+      <tr>
+        <td colspan="5"><%= trail_configuration.name %></td>
+        <td colspan="5"><%= trail_configuration.drug.name %></td>
+        <td colspan="3"><%= trail_configuration.clinic.name %></td>
+        <td colspan="3"><%= trail_configuration.doctor.name %></td>
+        <td><%= link_to 'Show', trail_configuration %></td>
+        <td><%= link_to 'Edit', edit_trail_configuration_path(trail_configuration) %></td>
+        <td><%= link_to 'Destroy', trail_configuration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trail Configuration', new_trail_configuration_path %>

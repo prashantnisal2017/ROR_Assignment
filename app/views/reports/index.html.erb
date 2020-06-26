@@ -1,0 +1,26 @@
+<h1>Drugs Comparison</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3">Trail</th>
+      <th colspan="3">Clinic</th>
+      <th colspan="3">Patient</th>
+      <th colspan="3">drug</th>
+      <th colspan="3">feedback</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trails.each do |trail| %>
+      <tr>
+        <td colspan="3"><%= trail.name %></td>
+        <td colspan="3"><%= trail.trail_configuration.clinic.name %></td>
+        <td colspan="3"><%= trail.patient.name %></td>
+        <td colspan="3"><%= trail.trail_configuration.drug.name %></td>
+        <td colspan="3"><%= trail.feedbacks.first.observation %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
